@@ -8,8 +8,8 @@ DYNAMIC_DOCS = /.*(getting-started|deployment\/network|understanding\/understand
 
 GITHUB_EDIT_PAGE_LINK = 'https://github.com/resin-io/docs/edit/master'
 
-MAIN_SITE = 'https://resin.io'
-DASHBOARD_SITE  = 'https://dashboard.resin.io'
+MAIN_SITE = process.env.MAIN_SITE || 'https://resin.io'
+DASHBOARD_SITE  = process.env.DASHBOARD_SITE || 'https://dashboard.resin.io'
 LOGO = '/img/logo.svg'
 BASE_URL = process.env.BASE_URL || 'https://docs.resin.io'
 FB_APP_ID = '221218511385682'

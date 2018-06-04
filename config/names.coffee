@@ -1,6 +1,3 @@
-COMPANY_LOWER = "resin.io"
-COMPANY_UPPER = "Resin.io"
-COMPANY_ALL_CAPS = "RESIN"
 COMPANY_SHORT = "resin"
 COMPANY_DASH = "resin-io"
 OS_LOWER = "resinOS"
@@ -9,18 +6,17 @@ ENGINE_LOWER = "balena"
 ENGINE_UPPER = "Balena"
 DOMAIN = "resin.io"
 
-
 module.exports =
-  company: 
-    lower: COMPANY_LOWER
-    upper: COMPANY_UPPER
-    allCaps: COMPANY_ALL_CAPS
-    short: COMPANY_SHORT
-    dash: COMPANY_DASH
-  os: 
-    lower: OS_LOWER
-    upper: OS_UPPER
-  engine: 
-    lower: ENGINE_LOWER
-    upper: ENGINE_UPPER
-  domain: DOMAIN
+  company:
+    lower: process.env.COMPANY_LOWER || 'resin.io'
+    upper: process.env.COMPANY_UPPER || 'Resin.io'
+    allCaps: process.env.COMPANY_ALL_CAPS || 'RESIN'
+    short: process.env.COMPANY_SHORT
+    dash: process.env.COMPANY_DASH
+  os:
+    lower: process.env.OS_LOWER
+    upper: process.env.OS_UPPER
+  engine:
+    lower: process.env.ENGINE_LOWER
+    upper: process.env.ENGINE_UPPER
+  domain: process.env.DOMAIN
